@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<weapons>
+  <weapon name="Arme à deux mains" enc="200" group="Armes lourdes" damage="BF" lowRange="0" highRange="0" reload="0" goldenCrowns="20" silverShillings="0" brassPennies="0">
+    <attribute>Lente</attribute>
+    <attribute>Percutante</attribute>
+  </weapon>
+  <weapon name="Arme à une main" enc="50" group="Aucun" damage="BF" lowRange="0" highRange="0" reload="0" goldenCrowns="10" silverShillings="0" brassPennies="0" />
+  <weapon name="Arme improvisée" enc="35" group="Aucun" damage="BF-4" lowRange="6" highRange="0" reload="1" goldenCrowns="0" silverShillings="0" brassPennies="0" />
+  <weapon name="Bâton" enc="50" group="Aucun" damage="BF-2" lowRange="0" highRange="0" reload="0" goldenCrowns="0" silverShillings="3" brassPennies="0">
+    <attribute>Assomante</attribute>
+    <attribute>Défensive</attribute>
+  </weapon>
+  <weapon name="Bouclier" enc="50" group="Aucun" damage="BF-2" lowRange="0" highRange="0" reload="0" goldenCrowns="10" silverShillings="0" brassPennies="0">
+    <attribute>Défensive</attribute>
+    <attribute>Spéciale</attribute>
+  </weapon>
+  <weapon name="Brise-lame" enc="40" group="Armes de parade" damage="BF-3" lowRange="0" highRange="0" reload="0" goldenCrowns="5" silverShillings="0" brassPennies="0">
+    <attribute>Equilibrée</attribute>
+    <attribute>Spéciale</attribute>
+  </weapon>
+  <weapon name="Dague" enc="10" group="Aucun" damage="BF-3" lowRange="0" highRange="0" reload="0" goldenCrowns="1" silverShillings="0" brassPennies="0" />
+  <weapon name="Demi-lance" enc="75" group="Armes de cavalerie" damage="BF" lowRange="0" highRange="0" reload="0" goldenCrowns="20" silverShillings="0" brassPennies="0">
+    <attribute>Epuisante</attribute>
+    <attribute>Percutante</attribute>
+    <attribute>Rapide</attribute>
+  </weapon>
+  <weapon name="Fléau d'armes" enc="95" group="Fléaux" damage="BF+1" lowRange="0" highRange="0" reload="0" goldenCrowns="15" silverShillings="0" brassPennies="0">
+    <attribute>Epuisante</attribute>
+    <attribute>Percutante</attribute>
+  </weapon>
+  <weapon name="Fleuret" enc="40" group="Armes d'escrime" damage="BF-2" lowRange="0" highRange="0" reload="0" goldenCrowns="18" silverShillings="0" brassPennies="0">
+    <attribute>Précise</attribute>
+    <attribute>Rapide</attribute>
+  </weapon>
+  <weapon name="Gantelet" enc="1" group="Aucun" damage="BF-3" lowRange="0" highRange="0" reload="0" goldenCrowns="1" silverShillings="0" brassPennies="0">
+    <attribute>Assomante</attribute>
+  </weapon>
+  <weapon name="Coups-de-poing" enc="1" group="Aucun" damage="BF-3" lowRange="0" highRange="0" reload="0" goldenCrowns="1" silverShillings="0" brassPennies="0">
+    <attribute>Assomante</attribute>
+  </weapon>
+  <weapon name="Hallebarde" enc="175" group="Armes lourdes" damage="BF" lowRange="0" highRange="0" reload="0" goldenCrowns="15" silverShillings="0" brassPennies="0">
+    <attribute>Spéciale</attribute>
+  </weapon>
+  <weapon name="Lance" enc="50" group="Aucun" damage="BF" lowRange="0" highRange="0" reload="0" goldenCrowns="10" silverShillings="0" brassPennies="0">
+    <attribute>Rapide</attribute>
+  </weapon>
+  <weapon name="Lance de cavalerie" enc="100" group="Armes de cavalerie" damage="BF+1" lowRange="0" highRange="0" reload="0" goldenCrowns="15" silverShillings="0" brassPennies="0">
+    <attribute>Epuisante</attribute>
+    <attribute>Percutante</attribute>
+    <attribute>Rapide</attribute>
+  </weapon>
+  <weapon name="Main gauche" enc="15" group="Armes de parade" damage="BF-3" lowRange="0" highRange="0" reload="0" goldenCrowns="4" silverShillings="0" brassPennies="0">
+    <attribute>Défensive</attribute>
+    <attribute>Equilibrée</attribute>
+  </weapon>
+  <weapon name="Mains nues" enc="0" group="Aucun" damage="BF-4" lowRange="0" highRange="0" reload="0" goldenCrowns="0" silverShillings="0" brassPennies="0">
+    <attribute>Spéciale</attribute>
+  </weapon>
+  <weapon name="Morgenstern" enc="60" group="Fléaux" damage="BF" lowRange="0" highRange="0" reload="0" goldenCrowns="15" silverShillings="0" brassPennies="0">
+    <attribute>Epuisante</attribute>
+    <attribute>Percutante</attribute>
+  </weapon>
+  <weapon name="Rapière" enc="40" group="Armes d'escrime" damage="BF-1" lowRange="0" highRange="0" reload="0" goldenCrowns="18" silverShillings="0" brassPennies="0">
+    <attribute>Rapide</attribute>
+  </weapon>
+  <weapon name="Rondache" enc="10" group="Armes de parade" damage="BF-4" lowRange="0" highRange="0" reload="0" goldenCrowns="2" silverShillings="0" brassPennies="0">
+    <attribute>Assomante</attribute>
+    <attribute>Défensive</attribute>
+    <attribute>Equilibrée</attribute>
+  </weapon>
+  <weapon name="Arbalète" enc="120" group="Aucun" damage="4" lowRange="30" highRange="60" reload="2" goldenCrowns="29" silverShillings="3" brassPennies="4" />
+  <weapon name="Arbalète à répétition" enc="150" group="Arbalètes" damage="2" lowRange="16" highRange="32" reload="0" goldenCrowns="100" silverShillings="0" brassPennies="0">
+    <attribute>Spéciale</attribute>
+  </weapon>
+  <weapon name="Arbalète de poing" enc="25" group="Arbalètes" damage="2" lowRange="8" highRange="16" reload="2" goldenCrowns="35" silverShillings="0" brassPennies="0" />
+  <weapon name="Arc" enc="80" group="Aucun" damage="3" lowRange="24" highRange="48" reload="1" goldenCrowns="10" silverShillings="0" brassPennies="0" />
+  <weapon name="Arc court" enc="75" group="Aucun" damage="3" lowRange="16" highRange="32" reload="1" goldenCrowns="7" silverShillings="0" brassPennies="0" />
+  <weapon name="Arc elfique" enc="75" group="Arcs longs" damage="3" lowRange="36" highRange="72" reload="1" goldenCrowns="70" silverShillings="0" brassPennies="0">
+    <attribute>Perforante</attribute>
+  </weapon>
+  <weapon name="Arc long" enc="90" group="Arcs longs" damage="3" lowRange="30" highRange="60" reload="1" goldenCrowns="15" silverShillings="0" brassPennies="0">
+    <attribute>Perforante</attribute>
+  </weapon>
+  <weapon name="Arquebuse" enc="30" group="Armes a poudre" damage="4" lowRange="24" highRange="48" reload="4" goldenCrowns="300" silverShillings="0" brassPennies="0">
+    <attribute>Percutante</attribute>
+    <attribute>Peu fiable</attribute>
+  </weapon>
+  <weapon name="Arquebuse a répétition" enc="30" group="Armes mécaniques" damage="4" lowRange="24" highRange="48" reload="0" goldenCrowns="600" silverShillings="0" brassPennies="0">
+    <attribute>Expérimentale</attribute>
+    <attribute>Spéciale</attribute>
+  </weapon>
+  <weapon name="Bolas" enc="20" group="Armes paralysantes" damage="1" lowRange="8" highRange="16" reload="1" goldenCrowns="0" silverShillings="7" brassPennies="0">
+    <attribute>Immobilisante</attribute>
+  </weapon>
+  <weapon name="Dague de jet" enc="10" group="Armes de jet" damage="BF-3" lowRange="6" highRange="12" reload="1" goldenCrowns="30" silverShillings="0" brassPennies="0" />
+  <weapon name="Etoile de jet" enc="10" group="Armes de jet" damage="BF-3" lowRange="6" highRange="12" reload="1" goldenCrowns="30" silverShillings="0" brassPennies="0" />
+  <weapon name="Filet" enc="60" group="Armes paralysantes" damage="0" lowRange="4" highRange="8" reload="2" goldenCrowns="3" silverShillings="0" brassPennies="0">
+    <attribute>Immobilisante</attribute>
+  </weapon>
+  <weapon name="Fouet" enc="40" group="Armes paralysantes" damage="BF-4" lowRange="6" highRange="0" reload="1" goldenCrowns="2" silverShillings="0" brassPennies="0">
+    <attribute>Immobilisante</attribute>
+    <attribute>Rapide</attribute>
+  </weapon>
+  <weapon name="Fronde" enc="10" group="Lance-pierres" damage="3" lowRange="16" highRange="32" reload="1" goldenCrowns="4" silverShillings="0" brassPennies="0" />
+  <weapon name="Fustibale" enc="50" group="Lance-pierres" damage="4" lowRange="24" highRange="48" reload="2" goldenCrowns="6" silverShillings="0" brassPennies="0" />
+  <weapon name="Hache de jet" enc="40" group="Armes de jet" damage="BF-2" lowRange="8" highRange="0" reload="1" goldenCrowns="5" silverShillings="0" brassPennies="0" />
+  <weapon name="Marteau de jet" enc="40" group="Armes de jet" damage="BF-2" lowRange="8" highRange="0" reload="1" goldenCrowns="5" silverShillings="0" brassPennies="0" />
+  <weapon name="Javelot" enc="30" group="Aucun" damage="BF-1" lowRange="8" highRange="16" reload="1" goldenCrowns="1" silverShillings="5" brassPennies="0" />
+  <weapon name="Lance" enc="50" group="Aucun" damage="BF" lowRange="8" highRange="0" reload="1" goldenCrowns="10" silverShillings="0" brassPennies="0" />
+  <weapon name="Lasso" enc="10" group="Armes paralysantes" damage="0" lowRange="8" highRange="0" reload="1" goldenCrowns="1" silverShillings="0" brassPennies="0">
+    <attribute>Immobilisante</attribute>
+  </weapon>
+  <weapon name="Long fusil d'Hochland" enc="70" group="Armes mécaniques" damage="4" lowRange="48" highRange="96" reload="4" goldenCrowns="450" silverShillings="0" brassPennies="0">
+    <attribute>Percutante</attribute>
+    <attribute>Peu fiable</attribute>
+  </weapon>
+  <weapon name="Pistolet" enc="25" group="Armes à poudre" damage="4" lowRange="8" highRange="16" reload="4" goldenCrowns="200" silverShillings="0" brassPennies="0">
+    <attribute>Percutante</attribute>
+    <attribute>Peu fiable</attribute>
+  </weapon>
+  <weapon name="Pistolet à répétition" enc="25" group="Armes mécaniques" damage="4" lowRange="8" highRange="16" reload="0" goldenCrowns="400" silverShillings="0" brassPennies="0">
+    <attribute>Expérimentale</attribute>
+    <attribute>Spéciale</attribute>
+  </weapon>
+  <weapon name="Tromblon" enc="50" group="Armes à poudre" damage="3" lowRange="32" highRange="0" reload="6" goldenCrowns="70" silverShillings="0" brassPennies="0">
+    <attribute>Mitraille</attribute>
+  </weapon>
+</weapons>
