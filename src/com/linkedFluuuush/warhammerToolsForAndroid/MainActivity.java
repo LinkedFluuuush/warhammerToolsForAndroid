@@ -1,5 +1,6 @@
 package com.linkedFluuuush.warhammerToolsForAndroid;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -126,10 +127,16 @@ public class MainActivity extends Activity {
 
                     Character character = new Character(race, career);
 
-                    MainActivity.this.setContentView(R.layout.display_character);
+                    /*MainActivity.this.setContentView(R.layout.display_character);
 
                     characterText = (TextView)findViewById(R.id.characterText);
-                    characterText.setText(character.toString());
+                    characterText.setText(character.toString());*/
+
+                    Intent intent = new Intent(MainActivity.this, DisplayActivity.class);
+                    intent.putExtra("EXTRA_RACE", race.getName());
+                    intent.putExtra("EXTRA_CAREER", career.getName());
+
+                    startActivity(intent);
                 }
             });
         }
