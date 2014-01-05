@@ -4,6 +4,7 @@ import com.linkedFluuuush.warhammerToolsForAndroid.core.equipment.Armour;
 import com.linkedFluuuush.warhammerToolsForAndroid.core.equipment.Equipment;
 import com.linkedFluuuush.warhammerToolsForAndroid.core.equipment.Weapon;
 
+import java.io.Serializable;
 import java.util.LinkedList;
 
 /**
@@ -11,7 +12,7 @@ import java.util.LinkedList;
  * Date: 12/11/13
  * Time: 15:20
  */
-public class Career implements Comparable {
+public class Career implements Comparable, Serializable {
     private String name;
     private Profile profile;
     private int type;

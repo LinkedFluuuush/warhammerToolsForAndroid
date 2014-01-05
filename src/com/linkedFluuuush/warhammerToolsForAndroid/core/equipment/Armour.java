@@ -1,5 +1,6 @@
 package com.linkedFluuuush.warhammerToolsForAndroid.core.equipment;
 
+import java.io.Serializable;
 import java.util.LinkedList;
 
 /**
@@ -7,7 +8,7 @@ import java.util.LinkedList;
  * Date: 12/11/13
  * Time: 15:31
  */
-public class Armour extends Equipment {
+public class Armour extends Equipment implements Serializable {
     private int armourLevel;
     private LinkedList<String> coveredZones;
 

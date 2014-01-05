@@ -704,13 +704,20 @@ public class xmlLoader {
         return careerLinkedList;
     }
 
-    public static void careerLinker(Career career, Context context){
+    public static void careerLinker(Context context){
         AssetManager asm = context.getAssets();
-        System.out.println("Linking career : " + career.getName());
         SAXBuilder sxb = new SAXBuilder();
         List<Element> careers;
         Element currentCareer;
         Iterator<Element> iteratorCareers;
+
+        List<Element> accessCareerElements;
+        LinkedList<Career> accessCareers;
+
+        List<Element> openingCareerElements;
+        LinkedList<Career> openingCareers;
+
+        Career career;
 
         try{
             document = sxb.build(asm.open("XMLs/careers.xml"));
@@ -720,67 +727,29 @@ public class xmlLoader {
         root = document.getRootElement();
 
         careers = root.getChildren("career");
+        iteratorCareers = careers.iterator();
 
-        currentCareer = searchElementCareerByName(careers, career.getName());
+        while(iteratorCareers.hasNext()){
+            currentCareer = iteratorCareers.next();
+            career = World.searchCareerByName(currentCareer.getAttributeValue("name"));
 
-        LinkedList<Career> accessCareer;
+            accessCareerElements = currentCareer.getChild("accessTable").getChildren("accessCareer");
+            accessCareers = new LinkedList<Career>();
 
-        if(career.getAccessCareers() == null || career.getAccessCareers().isEmpty()) {
-            accessCareer = new LinkedList<Career>();
-        } else {
-            accessCareer = career.getAccessCareers();
-        }
-
-        List<Element> eAccessCareers = currentCareer.getChild("accessTable").getChildren();
-
-        for(Element element : eAccessCareers){
-            Career currentAccess = World.searchCareerByName(element.getText());
-            if(currentAccess != null){
-                accessCareer.add(World.searchCareerByName(element.getText()));
-
-                if(!currentAccess.getOpeningCareers().contains(career)){
-                    currentAccess.addOpeningCareer(career);
-                }
+            for(Element aCareer : accessCareerElements){
+                accessCareers.add(World.searchCareerByName(aCareer.getText()));
             }
-        }
 
-        career.setAccessCareers(accessCareer);
+            openingCareerElements = currentCareer.getChild("openingTable").getChildren("openingCareer");
+            openingCareers = new LinkedList<Career>();
 
-        LinkedList<Career> openingCareer;
-
-        if(career.getOpeningCareers() == null || career.getOpeningCareers().isEmpty()) {
-            openingCareer = new LinkedList<Career>();
-        } else {
-            openingCareer = career.getOpeningCareers();
-        }
-
-        List<Element> eOpeningCareers = currentCareer.getChild("openingTable").getChildren();
-
-        for(Element element : eOpeningCareers){
-            Career currentOpening = World.searchCareerByName(element.getText());
-
-            if(currentOpening != null){
-                openingCareer.add(currentOpening);
-
-                if(!currentOpening.getAccessCareers().contains(career)){
-                    currentOpening.addAccessCareer(career);
-                }
+            for(Element aCareer : openingCareerElements){
+                openingCareers.add(World.searchCareerByName(aCareer.getText()));
             }
+
+            career.setAccessCareers(accessCareers);
+            career.setOpeningCareers(openingCareers);
         }
-
-        career.setOpeningCareers(openingCareer);
-    }
-
-    private static Element searchElementCareerByName(List<Element> careers, String name){
-        Element career = null;
-
-        for(Element currentCareer : careers){
-            if(currentCareer.getAttributeValue("name").equals(name)){
-                career = currentCareer;
-            }
-        }
-
-        return career;
     }
 
     public static LinkedList<String> distinguishingSignsLoader(Context context){
@@ -809,5 +778,62 @@ public class xmlLoader {
         }
 
         return distinguishingSignList;
+    }
+
+    public static void careerLinkerUpdater(Context context){
+        AssetManager asm = context.getAssets();
+        SAXBuilder sxb = new SAXBuilder();
+        List<Element> careers;
+        Element currentCareer;
+        Iterator<Element> iteratorCareers;
+
+        List<Element> accessCareerElements;
+        LinkedList<Career> accessCareers;
+
+        List<Element> openingCareerElements;
+        LinkedList<Career> openingCareers;
+
+        Career career;
+        Career verification;
+
+        try{
+            document = sxb.build(asm.open("XMLs/careers.xml"));
+        }catch (JDOMException ignored) {}
+        catch (IOException ignored) {}
+
+        root = document.getRootElement();
+
+        careers = root.getChildren("career");
+        iteratorCareers = careers.iterator();
+
+        while(iteratorCareers.hasNext()){
+            currentCareer = iteratorCareers.next();
+            career = World.searchCareerByName(currentCareer.getAttributeValue("name"));
+
+            accessCareerElements = currentCareer.getChild("accessTable").getChildren("accessCareer");
+            accessCareers = new LinkedList<Career>();
+
+            for(Element aCareer : accessCareerElements){
+                accessCareers.add(World.searchCareerByName(aCareer.getText()));
+                verification = World.searchCareerByName(aCareer.getText());
+                if(!verification.getOpeningCareers().contains(career)){
+                    verification.addOpeningCareer(career);
+                }
+            }
+
+            openingCareerElements = currentCareer.getChild("openingTable").getChildren("openingCareer");
+            openingCareers = new LinkedList<Career>();
+
+            for(Element aCareer : openingCareerElements){
+                openingCareers.add(World.searchCareerByName(aCareer.getText()));
+                verification = World.searchCareerByName(aCareer.getText());
+                if(!verification.getAccessCareers().contains(career)){
+                    verification.addAccessCareer(career);
+                }
+            }
+
+            career.setAccessCareers(accessCareers);
+            career.setOpeningCareers(openingCareers);
+        }
     }
 }

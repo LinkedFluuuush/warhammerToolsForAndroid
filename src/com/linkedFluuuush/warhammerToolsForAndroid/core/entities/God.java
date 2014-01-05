@@ -1,5 +1,6 @@
 package com.linkedFluuuush.warhammerToolsForAndroid.core.entities;
 
+import java.io.Serializable;
 import java.util.LinkedList;
 
 /**
@@ -7,7 +8,7 @@ import java.util.LinkedList;
  * Date: 18/11/13
  * Time: 20:06
  */
-public class God {
+public class God implements Serializable {
     private String name;
     private LinkedList<String> domains;
     private LinkedList<String> worshipers;

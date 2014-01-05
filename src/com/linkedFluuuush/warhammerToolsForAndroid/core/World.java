@@ -1,6 +1,7 @@
 package com.linkedFluuuush.warhammerToolsForAndroid.core;
 
 import android.content.Context;
+import android.widget.TextView;
 import com.linkedFluuuush.warhammerToolsForAndroid.core.characteristics.Career;
 import com.linkedFluuuush.warhammerToolsForAndroid.core.characteristics.Race;
 import com.linkedFluuuush.warhammerToolsForAndroid.core.characteristics.Skill;
@@ -48,10 +49,7 @@ public class World {
         RACES = xmlLoader.raceLoader(context);
         CAREERS = xmlLoader.careerLoader(context);
 
-        /*for(Career career : CAREERS){
-            xmlLoader.careerLinker(career, context);
-        }
-        xmlSaver.saveCareers();*/
+        xmlLoader.careerLinker(context);
     }
 
     public static Skill searchSkillByName(String name){

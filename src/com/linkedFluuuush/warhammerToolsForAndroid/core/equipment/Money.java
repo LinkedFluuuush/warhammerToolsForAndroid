@@ -1,5 +1,6 @@
 package com.linkedFluuuush.warhammerToolsForAndroid.core.equipment;
 
+import java.io.Serializable;
 import java.util.Random;
 
 /**
@@ -9,7 +10,7 @@ import java.util.Random;
  * Time: 15:30
  * To change this template use File | Settings | File Templates.
  */
-public class Money {
+public class Money implements Serializable {
     private int goldenCrowns;
     private int silverShillings;
     private int brassPennies;

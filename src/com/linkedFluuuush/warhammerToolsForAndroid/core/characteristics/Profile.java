@@ -1,5 +1,7 @@
 package com.linkedFluuuush.warhammerToolsForAndroid.core.characteristics;
 
+import java.io.Serializable;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Linked
@@ -7,7 +9,7 @@ package com.linkedFluuuush.warhammerToolsForAndroid.core.characteristics;
  * Time: 15:30
  * To change this template use File | Settings | File Templates.
  */
-public class Profile {
+public class Profile implements Serializable {
     private int ws;
     private int bs;
     private int s;

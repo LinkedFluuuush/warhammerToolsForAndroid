@@ -1,6 +1,8 @@
 package com.linkedFluuuush.warhammerToolsForAndroid.core.entities;
 
 import com.linkedFluuuush.warhammerToolsForAndroid.core.World;
+
+import java.io.Serializable;
 import java.util.LinkedList;
 
 /**
@@ -10,7 +12,7 @@ import java.util.LinkedList;
  * Time: 15:31
  * To change this template use File | Settings | File Templates.
  */
-public class PersonalDetails {
+public class PersonalDetails implements Serializable {
     private boolean male;
     private int age;
     private String birthplace;

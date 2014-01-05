@@ -5,6 +5,7 @@ import com.linkedFluuuush.warhammerToolsForAndroid.core.equipment.Armour;
 import com.linkedFluuuush.warhammerToolsForAndroid.core.equipment.Equipment;
 import com.linkedFluuuush.warhammerToolsForAndroid.core.equipment.Weapon;
 
+import java.io.Serializable;
 import java.util.LinkedList;
 
 /**
@@ -14,7 +15,7 @@ import java.util.LinkedList;
  * Time: 15:20
  * To change this template use File | Settings | File Templates.
  */
-public class Race {
+public class Race implements Serializable {
     private String name;
     private Profile profile;
     private int fSize;

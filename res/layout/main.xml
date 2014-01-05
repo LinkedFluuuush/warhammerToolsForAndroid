@@ -4,12 +4,22 @@
               android:orientation="vertical"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
-              tools:context=".MainActivity">
-    <TextView
+              tools:context=".MainActivity"
+              android:gravity="fill_horizontal|fill_vertical">
+    <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hi everyone !"
-            android:id="@+id/textView"
-            android:layout_gravity="center_horizontal"/>
+            android:layout_gravity="center"
+            android:id="@+id/raceSpinner"/>
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/careerSpinner"/>
+    <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Créer le personnage"
+            android:id="@+id/buttonCreate"/>
 </LinearLayout>
 

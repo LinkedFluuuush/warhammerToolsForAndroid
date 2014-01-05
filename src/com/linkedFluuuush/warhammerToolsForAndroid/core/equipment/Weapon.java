@@ -1,5 +1,6 @@
 package com.linkedFluuuush.warhammerToolsForAndroid.core.equipment;
 
+import java.io.Serializable;
 import java.util.LinkedList;
 
 /**
@@ -9,7 +10,7 @@ import java.util.LinkedList;
  * Time: 15:31
  * To change this template use File | Settings | File Templates.
  */
-public class Weapon extends Equipment {
+public class Weapon extends Equipment implements Serializable {
     private String group;
     private String damage;
     private int lowRange;

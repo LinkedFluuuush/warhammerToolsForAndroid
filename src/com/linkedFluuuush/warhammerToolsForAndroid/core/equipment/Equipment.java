@@ -1,5 +1,7 @@
 package com.linkedFluuuush.warhammerToolsForAndroid.core.equipment;
 
+import java.io.Serializable;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Linked
@@ -7,7 +9,7 @@ package com.linkedFluuuush.warhammerToolsForAndroid.core.equipment;
  * Time: 15:30
  * To change this template use File | Settings | File Templates.
  */
-public class Equipment {
+public class Equipment implements Serializable {
     private String name;
     private int enc;
     private Money price;

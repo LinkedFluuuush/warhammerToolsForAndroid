@@ -7,6 +7,7 @@ import com.linkedFluuuush.warhammerToolsForAndroid.core.equipment.Equipment;
 import com.linkedFluuuush.warhammerToolsForAndroid.core.equipment.Money;
 import com.linkedFluuuush.warhammerToolsForAndroid.core.equipment.Weapon;
 
+import java.io.Serializable;
 import java.util.LinkedList;
 import java.util.Random;
 
@@ -15,7 +16,7 @@ import java.util.Random;
  * Date: 12/11/13
  * Time: 15:14
  */
-public class Character {
+public class Character implements Serializable{
     private String name;
     private String player;
     private String type;
