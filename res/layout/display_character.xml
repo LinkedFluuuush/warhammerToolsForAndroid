@@ -7,5 +7,21 @@
     <TextView android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/characterText"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:text="Character undefined"/>
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/raceSpinner"/>
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/careerSpinner"/>
+    <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Créer le personnage"
+            android:id="@+id/buttonCreate"/>
 </LinearLayout>
