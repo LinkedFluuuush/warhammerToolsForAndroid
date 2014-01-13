@@ -26,16 +26,8 @@ import com.linkedFluuuush.warhammerToolsForAndroid.core.xmlHelper.xmlSaver;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends FragmentActivity implements ActionBar.TabListener {
+public class MainActivity extends Activity {
     private ProgressDialog progressDialog;
-    private Spinner raceSpinner;
-    private Spinner careerSpinner;
-    private Button buttonCreate;
-    private TextView characterText;
-
-    private ViewPager viewPager;
-    private TabsPagerAdapter tabsPagerAdapter;
-    private ActionBar actionBar;
     /**
      * Called when the activity is first created.
      */
@@ -45,21 +37,6 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
         setContentView(R.layout.main);
 
         new LoadViewTask().execute();
-    }
-
-    @Override
-    public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
-        viewPager.setCurrentItem(tab.getPosition());
-    }
-
-    @Override
-    public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction ft) {
-
-    }
-
-    @Override
-    public void onTabReselected(ActionBar.Tab tab, FragmentTransaction ft) {
-
     }
 
     private class LoadViewTask extends AsyncTask<Void, String, Void>{
@@ -123,76 +100,8 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
         @Override
         public void onPostExecute(Void result){
             progressDialog.dismiss();
-
-/*            List<Career> careerList = World.CAREERS;
-
-            ArrayAdapter<Career> careerDataAdapter = new ArrayAdapter<Career>(MainActivity.this.getApplicationContext(), android.R.layout.simple_spinner_item, careerList);
-            careerDataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-            careerSpinner.setAdapter(careerDataAdapter);
-
-            List<Race> raceList = World.RACES;
-
-            ArrayAdapter<Race> raceDataAdapter = new ArrayAdapter<Race>(MainActivity.this.getApplicationContext(), android.R.layout.simple_spinner_item, raceList);
-            raceDataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-            raceSpinner.setAdapter(raceDataAdapter);
-
-            buttonCreate.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Career career = (Career) careerSpinner.getSelectedItem();
-                    Race race = (Race) raceSpinner.getSelectedItem();
-
-                    Character character = new Character(race, career);
-
-                    MainActivity.this.setContentView(R.layout.display_character);
-
-                    characterText = (TextView)findViewById(R.id.characterText);
-                    characterText.setText(character.toString());
-
-                    Intent intent = new Intent(MainActivity.this, DisplayActivity.class);
-                    intent.putExtra("EXTRA_RACE", race.getName());
-                    intent.putExtra("EXTRA_CAREER", career.getName());
-
-                    startActivity(intent);
-                }
-            });*/
-
-            viewPager = (ViewPager) findViewById(R.id.pager);
-            actionBar = getActionBar();
-            tabsPagerAdapter = new TabsPagerAdapter(getSupportFragmentManager());
-
-            viewPager.setAdapter(tabsPagerAdapter);
-            actionBar.setHomeButtonEnabled(false);
-            actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-            viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-                @Override
-                public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-                }
-
-                @Override
-                public void onPageSelected(int position) {
-                    actionBar.setSelectedNavigationItem(position);
-                }
-
-                @Override
-                public void onPageScrollStateChanged(int state) {
-
-                }
-            });
-
-            tabsPagerAdapter.addUtilsFragment();
-            actionBar.addTab(actionBar.newTab().setText("Utilitaire").setTabListener(MainActivity.this));
-
-            tabsPagerAdapter.addFragment();
-            tabsPagerAdapter.addFragment();
-            tabsPagerAdapter.addFragment();
-
-            actionBar.addTab(actionBar.newTab().setText("Character").setTabListener(MainActivity.this));
-            actionBar.addTab(actionBar.newTab().setText("Character").setTabListener(MainActivity.this));
-            actionBar.addTab(actionBar.newTab().setText("Character").setTabListener(MainActivity.this));
+            Intent intent = new Intent(MainActivity.this, DisplayActivity.class);
+            startActivity(intent);
         }
     }
 }

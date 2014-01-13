@@ -1,9 +1,16 @@
 package com.linkedFluuuush.warhammerToolsForAndroid;
 
+import android.app.ActionBar;
 import android.app.Activity;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.view.ViewPager;
+import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
+import com.linkedFluuuush.warhammerToolsForAndroid.adapter.TabsPagerAdapter;
 import com.linkedFluuuush.warhammerToolsForAndroid.core.World;
 import com.linkedFluuuush.warhammerToolsForAndroid.core.characteristics.Career;
 import com.linkedFluuuush.warhammerToolsForAndroid.core.characteristics.Race;
@@ -18,28 +25,63 @@ import com.linkedFluuuush.warhammerToolsForAndroid.core.entities.Character;
  * @author Jean-Baptiste Louvet jbaptiste.louvet@gmail.com
  * @version 1.0
  */
-public class DisplayActivity extends Activity {
+public class DisplayActivity extends FragmentActivity implements ActionBar.TabListener {
+    private ViewPager viewPager;
+    private TabsPagerAdapter tabsPagerAdapter;
+    private ActionBar actionBar;
 
-    TextView characterText;
 
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.display_character);
+        setContentView(R.layout.main);
 
-        characterText = (TextView) findViewById(R.id.characterText);
+        viewPager = (ViewPager) findViewById(R.id.pager);
+        actionBar = getActionBar();
+        tabsPagerAdapter = new TabsPagerAdapter(getSupportFragmentManager());
 
-        Intent intent = getIntent();
+        viewPager.setAdapter(tabsPagerAdapter);
+        actionBar.setHomeButtonEnabled(false);
+        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+            }
 
-        if(intent != null){
-            Career career = World.searchCareerByName(intent.getStringExtra("EXTRA_CAREER"));
-            Race race = World.searchRaceByName(intent.getStringExtra("EXTRA_RACE"));
+            @Override
+            public void onPageSelected(int position) {
+                actionBar.setSelectedNavigationItem(position);
+            }
 
-            Character character = new Character(race, career);
+            @Override
+            public void onPageScrollStateChanged(int state) {
+            }
+        });
 
-            characterText.setText(character.toString());
-        } else {
-            characterText.setText("Undefined character");
-        }
+        tabsPagerAdapter.addUtilsFragment();
+        actionBar.addTab(actionBar.newTab().setText("Utilitaire").setTabListener(this));
+
+        tabsPagerAdapter.addFragment();
+        tabsPagerAdapter.addFragment();
+        tabsPagerAdapter.addFragment();
+
+        actionBar.addTab(actionBar.newTab().setText("Character").setTabListener(this));
+        actionBar.addTab(actionBar.newTab().setText("Character").setTabListener(this));
+        actionBar.addTab(actionBar.newTab().setText("Character").setTabListener(this));
+    }
+
+    @Override
+    public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
+        viewPager.setCurrentItem(tab.getPosition());
+    }
+
+    @Override
+    public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction ft) {
+
+    }
+
+    @Override
+    public void onTabReselected(ActionBar.Tab tab, FragmentTransaction ft) {
+
     }
 }

@@ -5,10 +5,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.Spinner;
-import android.widget.TextView;
+import android.widget.*;
 import com.linkedFluuuush.warhammerToolsForAndroid.R;
 import com.linkedFluuuush.warhammerToolsForAndroid.core.World;
 import com.linkedFluuuush.warhammerToolsForAndroid.core.characteristics.Career;
@@ -33,6 +30,8 @@ public class DisplayFragment extends Fragment {
     TextView characterText;
     Character character;
 
+    EditText textName;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedIntanceState){
         View rootView = inflater.inflate(R.layout.display_character, container, false);
@@ -41,6 +40,7 @@ public class DisplayFragment extends Fragment {
         careerSpinner = (Spinner) rootView.findViewById(R.id.careerSpinner);
         buttonCreate = (Button) rootView.findViewById(R.id.buttonCreate);
         characterText = (TextView) rootView.findViewById(R.id.characterText);
+        textName = (EditText) rootView.findViewById(R.id.textName);
 
         List<Career> careerList = World.CAREERS;
 
@@ -70,11 +70,7 @@ public class DisplayFragment extends Fragment {
 
                 characterText.setText(character.toString());
 
-                /*Intent intent = new Intent(MainActivity.this, DisplayActivity.class);
-                intent.putExtra("EXTRA_RACE", race.getName());
-                intent.putExtra("EXTRA_CAREER", career.getName());
-
-                startActivity(intent);*/
+                textName.setText(character.getName());
             }
         });
 
