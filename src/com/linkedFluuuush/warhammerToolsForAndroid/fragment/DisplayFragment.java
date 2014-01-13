@@ -34,6 +34,12 @@ public class DisplayFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedIntanceState){
+        super.onCreateView(inflater, container, savedIntanceState);
+
+        if(savedIntanceState != null){
+            this.character = (Character) savedIntanceState.getSerializable("character");
+        }
+
         View rootView = inflater.inflate(R.layout.display_character, container, false);
 
         raceSpinner = (Spinner) rootView.findViewById(R.id.raceSpinner);
@@ -76,4 +82,11 @@ public class DisplayFragment extends Fragment {
 
         return rootView;
     }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putSerializable("character", character);
+    }
+
 }

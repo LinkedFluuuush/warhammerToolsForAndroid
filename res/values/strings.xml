@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">warhammerToolsForAndroid</string>
+    <string name="characterName">Nom : </string>
+    <string name="race">Race : </string>
+    <string name="career">Carrière : </string>
+    <string name="buttonCreate">Générer le personnage</string>
+    <string name="age">Age : </string>
+    <string name="gender">Sexe : </string>
+    <string name="height">Taille :</string>
+    <string name="eyeColour">Couleur des yeux :</string>
+    <string name="hairColour">Couleur des cheveux :</string>
+    <string name="weight">Poids :</string>
+    <string name="astralSign">Signe astral :</string>
+    <string name="mainHand">Main directrice :</string>
+    <string name="birthPlace">Lieu de naissance :</string>
+    <string name="favoriteGod">Dieu favori : </string>
+    <string name="distinguishingSigns">Signes distinctifs :</string>
+
 </resources>

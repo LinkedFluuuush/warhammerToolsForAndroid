@@ -12,55 +12,210 @@
         <TextView android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/characterText"
-                android:layout_gravity="center"
-                android:text="Character undefined"/>
+                android:layout_gravity="center"/>
 
         <TableLayout style="@style/tableLayoutStyle">
             <TableRow style="@style/tableRowStyle">
-                <LinearLayout android:orientation="horizontal">
+                <LinearLayout android:orientation="horizontal"
+                        style="@style/tableCellStyle">
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="Nom : "/>
+                            android:text="@string/characterName"/>
                     <EditText android:layout_width="wrap_content" android:layout_height="wrap_content"
                               android:id="@+id/textName"/>
                 </LinearLayout>
+                <LinearLayout android:orientation="horizontal"
+                              style="@style/tableCellStyle">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/race"/>
+                    <Spinner
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:id="@+id/raceSpinner"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal"
+                              style="@style/tableCellStyle">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/career"/>
+                    <Spinner
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:id="@+id/careerSpinner"/>
+                </LinearLayout>
+            </TableRow>
+            <TableRow style="@style/tableRowStyle">
+                <Button android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/buttonCreate"
+                        android:id="@+id/buttonCreate"/>
+            </TableRow>
+            <TableRow style="@style/tableRowStyle">
+                <TableLayout style="@style/tableLayoutStyle">
+                    <TableRow style="@style/tableRowStyle">
+                        <LinearLayout android:orientation="horizontal"
+                                      style="@style/tableCellStyle">
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@string/age"/>
+                            <EditText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:id="@+id/textAge"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal"
+                                      style="@style/tableCellStyle">
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@string/gender"/>
+                            <Spinner
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:id="@+id/spinnerGender"/>
+                        </LinearLayout>
+                    </TableRow>
+                    <TableRow style="@style/tableRowStyle">
+                        <LinearLayout android:orientation="horizontal"
+                                      style="@style/tableCellStyle">
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@string/eyeColour"/>
+                            <EditText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:id="@+id/textEyeColour"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal"
+                                      style="@style/tableCellStyle">
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@string/height"/>
+                            <EditText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:id="@+id/textHeight"/>
+                        </LinearLayout>
+                    </TableRow>
+                    <TableRow style="@style/tableRowStyle">
+                        <LinearLayout android:orientation="horizontal"
+                                      style="@style/tableCellStyle">
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@string/hairColour"/>
+                            <EditText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:id="@+id/textHairColour"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal"
+                                      style="@style/tableCellStyle">
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@string/weight"/>
+                            <EditText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:id="@+id/textWeight"/>
+                        </LinearLayout>
+                    </TableRow>
+                    <TableRow style="@style/tableRowStyle">
+                        <LinearLayout android:orientation="horizontal"
+                                      style="@style/tableCellStyle">
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@string/astralSign"/>
+                            <EditText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:id="@+id/textAstralSign"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal"
+                                      style="@style/tableCellStyle">
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@string/mainHand"/>
+                            <Spinner
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:id="@+id/spinnerMainHand"/>
+                        </LinearLayout>
+                    </TableRow>
+                    <TableRow style="@style/tableRowStyle">
+                        <LinearLayout android:orientation="horizontal"
+                                      style="@style/tableCellStyle">
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@string/birthPlace"/>
+                            <EditText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:id="@+id/textBirthPlace"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal"
+                                      style="@style/tableCellStyle">
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@string/favoriteGod"/>
+                            <Spinner
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:id="@+id/favoriteGod"/>
+                        </LinearLayout>
+                    </TableRow>
+                    <TableRow style="@style/tableRowStyle">
+                        <LinearLayout android:orientation="vertical"
+                                      style="@style/tableCellStyle">
+                            <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="left"
+                                    android:text="@string/distinguishingSigns"/>
+                            <EditText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:id="@+id/textBirthPlace"/>
+                        </LinearLayout>
+                    </TableRow>
+                </TableLayout>
             </TableRow>
         </TableLayout>
-
-
-        <LinearLayout android:orientation="horizontal"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:layout_gravity="center">
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="Race : "/>
-            <Spinner
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:id="@+id/raceSpinner"/>
-        </LinearLayout>
-        <LinearLayout android:orientation="horizontal"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:layout_gravity="center">
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="Carrière : "/>
-            <Spinner
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:id="@+id/careerSpinner"/>
-        </LinearLayout>
-        <Button android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="Créer le personnage"
-                android:id="@+id/buttonCreate"/>
     </LinearLayout>
 </ScrollView>
