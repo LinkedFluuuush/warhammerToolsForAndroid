@@ -5,7 +5,7 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="tableRowStyle" parent="tableLayoutStyle">
-        <item name="android:gravity">center_horizontal</item>
+        <item name="android:gravity">left</item>
     </style>
     <style name="tableCellStyle" parent="tableRowStyle">
         <item name="android:layout_marginLeft">10dp</item>
