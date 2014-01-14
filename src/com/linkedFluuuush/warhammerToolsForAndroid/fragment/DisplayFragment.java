@@ -152,8 +152,6 @@ public class DisplayFragment extends Fragment {
                 }
 
                 godSpinner.setSelection(World.GODS.indexOf(character.getDetails().getFavoriteGod()));
-
-                Toast.makeText(getActivity().getApplicationContext(), character.getDetails().toString(), Toast.LENGTH_LONG).show();
             }
         });
 
