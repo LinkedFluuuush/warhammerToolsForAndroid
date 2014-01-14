@@ -42,6 +42,24 @@ public class DisplayFragment extends Fragment {
     EditText textWeight;
     EditText textDistinguishingSigns;
 
+    EditText textWS;
+    EditText textBS;
+    EditText textS;
+    EditText textT;
+    EditText textAg;
+    EditText textInt;
+    EditText textWP;
+    EditText textFel;
+
+    EditText textA;
+    EditText textW;
+    EditText textSB;
+    EditText textTB;
+    EditText textM;
+    EditText textMag;
+    EditText textIP;
+    EditText textFP;
+
     Spinner genderSpinner;
     Spinner mainHandSpinner;
     Spinner godSpinner;
@@ -74,6 +92,24 @@ public class DisplayFragment extends Fragment {
         genderSpinner = (Spinner) rootView.findViewById(R.id.spinnerGender);
         mainHandSpinner = (Spinner) rootView.findViewById(R.id.spinnerMainHand);
         godSpinner = (Spinner) rootView.findViewById(R.id.favoriteGod);
+
+        textWS = (EditText) rootView.findViewById(R.id.WSText);
+        textBS = (EditText) rootView.findViewById(R.id.BSText);
+        textS = (EditText) rootView.findViewById(R.id.SText);
+        textT = (EditText) rootView.findViewById(R.id.TText);
+        textAg = (EditText) rootView.findViewById(R.id.AgText);
+        textInt = (EditText) rootView.findViewById(R.id.IntText);
+        textWP = (EditText) rootView.findViewById(R.id.WPText);
+        textFel = (EditText) rootView.findViewById(R.id.FelText);
+
+        textA = (EditText) rootView.findViewById(R.id.AText);
+        textW = (EditText) rootView.findViewById(R.id.WText);
+        textSB = (EditText) rootView.findViewById(R.id.SBText);
+        textTB = (EditText) rootView.findViewById(R.id.TBText);
+        textM = (EditText) rootView.findViewById(R.id.MText);
+        textMag = (EditText) rootView.findViewById(R.id.MagText);
+        textIP = (EditText) rootView.findViewById(R.id.IPText);
+        textFP = (EditText) rootView.findViewById(R.id.FPText);
 
         ArrayAdapter<Career> careerDataAdapter = new ArrayAdapter<Career>(getActivity().getApplicationContext(), android.R.layout.simple_spinner_item, World.CAREERS);
         careerDataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -113,7 +149,7 @@ public class DisplayFragment extends Fragment {
 
 
         if(character != null){
-            characterText.setText(character.toString());
+            applyCharacter();
         }
 
         buttonCreate.setOnClickListener(new View.OnClickListener() {
@@ -124,34 +160,9 @@ public class DisplayFragment extends Fragment {
 
                 character = new Character(race, career);
 
-                //characterText.setText(character.toString());
+                //characterText.setText(character.toString())
 
-                textName.setText(character.getName());
-                textAge.setText(character.getDetails().getAge() + " ans");
-                textEyeColor.setText(character.getDetails().getEyeColour());
-                textHairColor.setText(character.getDetails().getHairColour());
-                textAstralSign.setText(character.getDetails().getAstralSign().getName());
-                if(((character.getDetails().getHeight() % 100) + "").length() == 1)
-                    textHeight.setText(character.getDetails().getHeight() / 100 + "m0" + character.getDetails().getHeight() % 100);
-                else
-                    textHeight.setText(character.getDetails().getHeight() / 100 + "m" + character.getDetails().getHeight() % 100);
-                textWeight.setText(character.getDetails().getWeight() + " kg");
-                textBirthPlace.setText(character.getDetails().getBirthplace());
-
-                String s = "";
-                for(String sign : character.getDetails().getDistinguishingMarks()){
-                    s += sign + "\n";
-                }
-                s = s.substring(0, s.length() - 1);
-                textDistinguishingSigns.setText(s);
-
-                if(character.getDetails().isMale()){
-                    genderSpinner.setSelection(0);
-                } else {
-                    genderSpinner.setSelection(1);
-                }
-
-                godSpinner.setSelection(World.GODS.indexOf(character.getDetails().getFavoriteGod()));
+                applyCharacter();
             }
         });
 
@@ -162,6 +173,53 @@ public class DisplayFragment extends Fragment {
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putSerializable("character", character);
+    }
+
+    private void applyCharacter(){
+        textName.setText(character.getName());
+        textAge.setText(character.getDetails().getAge() + " ans");
+        textEyeColor.setText(character.getDetails().getEyeColour());
+        textHairColor.setText(character.getDetails().getHairColour());
+        textAstralSign.setText(character.getDetails().getAstralSign().getName());
+        if(((character.getDetails().getHeight() % 100) + "").length() == 1)
+            textHeight.setText(character.getDetails().getHeight() / 100 + "m0" + character.getDetails().getHeight() % 100);
+        else
+            textHeight.setText(character.getDetails().getHeight() / 100 + "m" + character.getDetails().getHeight() % 100);
+        textWeight.setText(character.getDetails().getWeight() + " kg");
+        textBirthPlace.setText(character.getDetails().getBirthplace());
+
+        String s = "";
+        for(String sign : character.getDetails().getDistinguishingMarks()){
+            s += sign + "\n";
+        }
+        s = s.substring(0, s.length() - 1);
+        textDistinguishingSigns.setText(s);
+
+        if(character.getDetails().isMale()){
+            genderSpinner.setSelection(0);
+        } else {
+            genderSpinner.setSelection(1);
+        }
+
+        godSpinner.setSelection(World.GODS.indexOf(character.getDetails().getFavoriteGod()));
+
+        textWS.setText(character.getProfile().getWs() + "");
+        textBS.setText(character.getProfile().getBs() + "");
+        textS.setText(character.getProfile().getS() + "");
+        textT.setText(character.getProfile().getT() + "");
+        textAg.setText(character.getProfile().getAg() + "");
+        textInt.setText(character.getProfile().getIntel() + "");
+        textWP.setText(character.getProfile().getWp() + "");
+        textFel.setText(character.getProfile().getFel() + "");
+
+        textA.setText(character.getProfile().getA() + "");
+        textW.setText(character.getProfile().getW() + "");
+        textSB.setText(character.getProfile().getSb() + "");
+        textTB.setText(character.getProfile().getTb() + "");
+        textM.setText(character.getProfile().getM() + "");
+        textMag.setText(character.getProfile().getMag() + "");
+        textIP.setText(character.getProfile().getIp() + "");
+        textFP.setText(character.getProfile().getFp() + "");
     }
 
 }

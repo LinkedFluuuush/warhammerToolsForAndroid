@@ -16,5 +16,21 @@
     <string name="birthPlace">Lieu de naissance :</string>
     <string name="favoriteGod">Dieu favori : </string>
     <string name="distinguishingSigns">Signes distinctifs :</string>
+    <string name="WS">CC</string>
+    <string name="BS">CT</string>
+    <string name="S">F</string>
+    <string name="T">E</string>
+    <string name="Ag">Ag</string>
+    <string name="Int">Int</string>
+    <string name="WP">FM</string>
+    <string name="Fel">Soc</string>
+    <string name="A">A</string>
+    <string name="W">B</string>
+    <string name="SB">BF</string>
+    <string name="TB">BE</string>
+    <string name="M">M</string>
+    <string name="Mag">Mag</string>
+    <string name="IP">PF</string>
+    <string name="FP">PD</string>
 
 </resources>
