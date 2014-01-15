@@ -65,11 +65,11 @@ public class DisplayFragment extends Fragment {
     Spinner godSpinner;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedIntanceState){
-        super.onCreateView(inflater, container, savedIntanceState);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+        super.onCreateView(inflater, container, savedInstanceState);
 
-        if(savedIntanceState != null){
-            this.character = (Character) savedIntanceState.getSerializable("character");
+        if(savedInstanceState != null){
+            this.character = (Character) savedInstanceState.getSerializable("character");
         }
 
         View rootView = inflater.inflate(R.layout.display_character, container, false);
@@ -77,7 +77,6 @@ public class DisplayFragment extends Fragment {
         raceSpinner = (Spinner) rootView.findViewById(R.id.raceSpinner);
         careerSpinner = (Spinner) rootView.findViewById(R.id.careerSpinner);
         buttonCreate = (Button) rootView.findViewById(R.id.buttonCreate);
-        characterText = (TextView) rootView.findViewById(R.id.characterText);
 
         textName = (EditText) rootView.findViewById(R.id.textName);
         textAge = (EditText) rootView.findViewById(R.id.textAge);

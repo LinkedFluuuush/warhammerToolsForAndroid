@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <TableLayout style="@style/tableLayoutStyle">
+        <TableRow style="@style/tableRowStyle">
+            <LinearLayout android:orientation="vertical">
+                <LinearLayout android:orientation="horizontal"
+                              style="@style/tableCellStyle">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:text="@string/characterName"/>
+                    <EditText android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:id="@+id/textName"/>
+                </LinearLayout>
+
+                <Button android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/buttonCreate"
+                        android:id="@+id/buttonCreate"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical">
+                <LinearLayout android:orientation="horizontal"
+                              style="@style/tableCellStyle">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/race"/>
+                    <Spinner
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:id="@+id/raceSpinner"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal"
+                              style="@style/tableCellStyle">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/career"/>
+                    <Spinner
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:id="@+id/careerSpinner"/>
+                </LinearLayout>
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

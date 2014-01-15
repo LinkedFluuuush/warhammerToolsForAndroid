@@ -4,6 +4,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import com.linkedFluuuush.warhammerToolsForAndroid.fragment.DisplayFragment;
+import com.linkedFluuuush.warhammerToolsForAndroid.fragment.DisplayMainFragment;
 import com.linkedFluuuush.warhammerToolsForAndroid.fragment.UtilsFragment;
 
 import java.util.LinkedList;
@@ -35,7 +36,7 @@ public class TabsPagerAdapter extends FragmentPagerAdapter {
     }
 
     public void addFragment(){
-        displayFragmentLinkedList.add(new DisplayFragment());
+        displayFragmentLinkedList.add(new DisplayMainFragment());
         notifyDataSetChanged();
     }
 
