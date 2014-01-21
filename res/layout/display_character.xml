@@ -4,7 +4,286 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-    <FrameLayout android:id="@+id/fragment_container"
-                 android:layout_width="match_parent"
-                 android:layout_height="match_parent" />
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<TableLayout style="@style/tableLayoutStyle">
+			<TableRow style="@style/tableRowStyle">
+				<LinearLayout android:orientation="vertical">
+					<LinearLayout android:orientation="horizontal"
+						style="@style/tableCellStyle">
+						<TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+							android:text="@string/characterName"/>
+						<EditText android:layout_width="wrap_content" android:layout_height="wrap_content"
+							android:id="@+id/textName"/>
+					</LinearLayout>
+
+					<Button android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/buttonCreate"
+                        android:id="@+id/buttonCreate"/>
+				</LinearLayout>
+				<LinearLayout android:orientation="vertical">
+					<LinearLayout android:orientation="horizontal"
+						style="@style/tableCellStyle">
+						<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/race"/>
+						<Spinner
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:id="@+id/raceSpinner"/>
+					</LinearLayout>
+					<LinearLayout android:orientation="horizontal"
+						style="@style/tableCellStyle">
+						<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/career"/>
+						<Spinner
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:id="@+id/careerSpinner"/>
+					</LinearLayout>
+				</LinearLayout>
+			</TableRow>
+
+			<TableRow style="@style/tableRowStyle">
+				<LinearLayout android:orientation="horizontal"
+					style="@style/tableCellStyle">
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="left"
+						android:text="@string/age"/>
+					<EditText
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="left"
+						android:id="@+id/textAge"/>
+				</LinearLayout>
+				<LinearLayout android:orientation="horizontal"
+					style="@style/tableCellStyle">
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="left"
+						android:text="@string/gender"/>
+					<Spinner
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="left"
+						android:id="@+id/spinnerGender"/>
+				</LinearLayout>
+			</TableRow>
+			<TableRow style="@style/tableRowStyle">
+				<LinearLayout android:orientation="horizontal"
+					style="@style/tableCellStyle">
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="left"
+						android:text="@string/eyeColour"/>
+					<EditText
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="left"
+						android:id="@+id/textEyeColour"/>
+				</LinearLayout>
+				<LinearLayout android:orientation="horizontal"
+					style="@style/tableCellStyle">
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="left"
+						android:text="@string/height"/>
+					<EditText
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="left"
+						android:id="@+id/textHeight"/>
+				</LinearLayout>
+			</TableRow>
+			<TableRow style="@style/tableRowStyle">
+				<LinearLayout android:orientation="horizontal"
+					style="@style/tableCellStyle">
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="left"
+						android:text="@string/hairColour"/>
+					<EditText
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="left"
+						android:id="@+id/textHairColour"/>
+				</LinearLayout>
+				<LinearLayout android:orientation="horizontal"
+					style="@style/tableCellStyle">
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="left"
+						android:text="@string/weight"/>
+					<EditText
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="left"
+						android:id="@+id/textWeight"/>
+				</LinearLayout>
+			</TableRow>
+			<TableRow style="@style/tableRowStyle">
+				<LinearLayout android:orientation="horizontal"
+					style="@style/tableCellStyle">
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="left"
+						android:text="@string/astralSign"/>
+					<EditText
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="left"
+						android:id="@+id/textAstralSign"/>
+				</LinearLayout>
+				<LinearLayout android:orientation="horizontal"
+					style="@style/tableCellStyle">
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="left"
+						android:text="@string/mainHand"/>
+					<Spinner
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="left"
+						android:id="@+id/spinnerMainHand"/>
+				</LinearLayout>
+			</TableRow>
+			<TableRow style="@style/tableRowStyle">
+				<LinearLayout android:orientation="horizontal"
+					style="@style/tableCellStyle">
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="left"
+						android:text="@string/birthPlace"/>
+					<EditText
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="left"
+						android:id="@+id/textBirthPlace"/>
+				</LinearLayout>
+				<LinearLayout android:orientation="horizontal"
+					style="@style/tableCellStyle">
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="left"
+						android:text="@string/favoriteGod"/>
+					<Spinner
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="left"
+						android:id="@+id/favoriteGod"/>
+				</LinearLayout>
+			</TableRow>
+			<TableRow style="@style/tableRowStyle">
+				<LinearLayout android:orientation="vertical"
+					style="@style/tableCellStyle">
+					<TextView
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_gravity="left"
+						android:text="@string/distinguishingSigns"/>
+					<EditText
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="left"
+						android:id="@+id/textDistinguishingSigns"/>
+				</LinearLayout>
+			</TableRow>
+			<TableLayout style="@style/tableLayoutStyle">
+				<TableRow style="@style/tableRowStyle">
+					<TextView style="@style/tableCellStyle"
+						android:text="@string/WS"/>
+					<TextView style="@style/tableCellStyle"
+						android:text="@string/BS"/>
+					<TextView style="@style/tableCellStyle"
+						android:text="@string/S"/>
+					<TextView style="@style/tableCellStyle"
+						android:text="@string/T"/>
+					<TextView style="@style/tableCellStyle"
+						android:text="@string/Ag"/>
+					<TextView style="@style/tableCellStyle"
+						android:text="@string/Int"/>
+					<TextView style="@style/tableCellStyle"
+						android:text="@string/WP"/>
+					<TextView style="@style/tableCellStyle"
+						android:text="@string/Fel"/>
+				</TableRow>
+				<TableRow style="@style/tableRowStyle">
+					<EditText style="@style/tableCellStyle"
+						android:id="@+id/WSText"/>
+					<EditText style="@style/tableCellStyle"
+						android:id="@+id/BSText"/>
+					<EditText style="@style/tableCellStyle"
+						android:id="@+id/SText"/>
+					<EditText style="@style/tableCellStyle"
+						android:id="@+id/TText"/>
+					<EditText style="@style/tableCellStyle"
+						android:id="@+id/AgText"/>
+					<EditText style="@style/tableCellStyle"
+						android:id="@+id/IntText"/>
+					<EditText style="@style/tableCellStyle"
+						android:id="@+id/WPText"/>
+					<EditText style="@style/tableCellStyle"
+						android:id="@+id/FelText"/>
+				</TableRow>
+				<TableRow style="@style/tableRowStyle">
+					<TextView style="@style/tableCellStyle"
+						android:text="@string/A"/>
+					<TextView style="@style/tableCellStyle"
+						android:text="@string/W"/>
+					<TextView style="@style/tableCellStyle"
+						android:text="@string/SB"/>
+					<TextView style="@style/tableCellStyle"
+						android:text="@string/TB"/>
+					<TextView style="@style/tableCellStyle"
+						android:text="@string/M"/>
+					<TextView style="@style/tableCellStyle"
+						android:text="@string/Mag"/>
+					<TextView style="@style/tableCellStyle"
+						android:text="@string/IP"/>
+					<TextView style="@style/tableCellStyle"
+						android:text="@string/FP"/>
+				</TableRow>
+				<TableRow style="@style/tableRowStyle">
+					<EditText style="@style/tableCellStyle"
+						android:id="@+id/AText"/>
+					<EditText style="@style/tableCellStyle"
+						android:id="@+id/WText"/>
+					<EditText style="@style/tableCellStyle"
+						android:id="@+id/SBText"/>
+					<EditText style="@style/tableCellStyle"
+						android:id="@+id/TBText"/>
+					<EditText style="@style/tableCellStyle"
+						android:id="@+id/MText"/>
+					<EditText style="@style/tableCellStyle"
+						android:id="@+id/MagText"/>
+					<EditText style="@style/tableCellStyle"
+						android:id="@+id/IPText"/>
+					<EditText style="@style/tableCellStyle"
+						android:id="@+id/FPText"/>
+				</TableRow>
+			</TableLayout>
+		</TableLayout>
+	</LinearLayout>
 </ScrollView>

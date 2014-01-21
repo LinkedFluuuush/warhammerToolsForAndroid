@@ -10,6 +10,7 @@ import com.linkedFluuuush.warhammerToolsForAndroid.core.equipment.Weapon;
 import java.io.Serializable;
 import java.util.LinkedList;
 import java.util.Random;
+import java.util.*;
 
 /**
  * User: Linked
@@ -783,4 +784,73 @@ public class Character implements Serializable{
 
         return res;
     }
+	
+	public HashMap serializeChar(){
+		HashMap<String,String> characterSerialized = new HashMap<String,String>();
+		
+		characterSerialized.putAll(this.details.serialize());
+		
+		characterSerialized.putAll(this.profile.serialize("normal"));
+		characterSerialized.putAll(this.basicProfile.serialize("basic"));
+		
+		characterSerialized.put("name", this.name);
+		characterSerialized.put("player", this.player);
+		characterSerialized.put("type", this.type);
+		
+		characterSerialized.put("race", this.race.getName());
+		characterSerialized.put("career", this.career.getName());
+		
+		String s = "";
+		for(Career career : previousCareers){
+			s += career.getName() + ":";
+		}
+		s = s.substring(0, s.length() - 1);
+		characterSerialized.put("previousCareers", s);
+		
+		s = "";
+		for(Skill skill : skills){
+			s += skill.getName() + ":";
+		}
+		s = s.substring(0, s.length() - 1);
+		characterSerialized.put("skills", s);
+		
+		s = "";
+		for(Talent talent : talents){
+			s += talent.getName() + ":";
+		}
+		s = s.substring(0, s.length() - 1);
+		characterSerialized.put("talents", s);
+		
+		s = "";
+		for(Weapon weapon : weapons){
+			s += weapon.getName() + ":";
+		}
+		s = s.substring(0, s.length() - 1);
+		characterSerialized.put("weapons", s);
+		
+		s = "";
+		for(Armour armour : armours){
+			s += armour.getName() + ":";
+		}
+		s = s.substring(0, s.length() - 1);
+		characterSerialized.put("armours", s);
+		
+		s = "";
+		for(Equipment e : equipment){
+			s += e.getName() + ":";
+		}
+		s = s.substring(0, s.length() - 1);
+		characterSerialized.put("equipment", s);
+		
+		s = money.getGoldenCrowns() + ":" + money.getSilverShillings() + ":" + money.getBrassPennies();
+		characterSerialized.put("money", s);
+		
+		return characterSerialized;
+	}
+	
+	public static Character unserialize(HashMap<String,String> serializedCharacter){
+		String name = serializedCharacter.get("name");
+		String player = serializedCharacter.get("player");
+		
+	}
 }

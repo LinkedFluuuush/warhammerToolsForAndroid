@@ -67,6 +67,7 @@ public class DisplayFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         super.onCreateView(inflater, container, savedInstanceState);
+		inflater.inflate(R.layout.display_character, container);
 
         if(savedInstanceState != null){
             this.character = (Character) savedInstanceState.getSerializable("character");

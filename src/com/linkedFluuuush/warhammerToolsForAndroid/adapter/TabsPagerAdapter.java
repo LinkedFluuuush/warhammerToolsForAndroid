@@ -36,7 +36,7 @@ public class TabsPagerAdapter extends FragmentPagerAdapter {
     }
 
     public void addFragment(){
-        displayFragmentLinkedList.add(new DisplayMainFragment());
+        displayFragmentLinkedList.add(new DisplayFragment());
         notifyDataSetChanged();
     }
 

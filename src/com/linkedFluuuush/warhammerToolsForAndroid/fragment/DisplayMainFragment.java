@@ -24,26 +24,26 @@ public class DisplayMainFragment extends Fragment {
 
         // Check that the activity is using the layout version with
         // the fragment_container FrameLayout
-        if (rootView.findViewById(R.id.fragment_container) != null) {
+        //if (rootView.findViewById(R.id.fragment_container) != null) {
 
             // However, if we're being restored from a previous state,
             // then we don't need to do anything and should return or else
             // we could end up with overlapping fragments.
-            if (savedInstanceState != null) {
-                return rootView;
-            }
+            //if (savedInstanceState != null) {
+            //    return rootView;
+            //}
 
             // Create a new Fragment to be placed in the activity layout
-            HelloWorldFragment firstFragment = new HelloWorldFragment();
+            DisplayProfileFragment firstFragment = new DisplayProfileFragment();
 
             // In case this activity was started with special instructions from an
             // Intent, pass the Intent's extras to the fragment as arguments
             firstFragment.setArguments(getActivity().getIntent().getExtras());
 
             // Add the fragment to the 'fragment_container' FrameLayout
-            getActivity().getSupportFragmentManager().beginTransaction()
-                    .add(R.id.fragment_container, firstFragment).commit();
-        }
+            //getActivity().getSupportFragmentManager().beginTransaction()
+                    //.add(R.id.fragment_container, firstFragment).commit();
+        //}
 
         return rootView;
     }
